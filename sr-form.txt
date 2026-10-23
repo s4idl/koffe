@@ -1,0 +1,140 @@
+link: Saltar al contenido principal
+link: koffe, ir al inicio
+image: koffe, ir al inicio
+navigation: Principal
+list: Secciones
+link: menú
+link: beans
+link: ordena
+link: comunidad
+link: visítanos
+region: café pa’ quedarse
+heading1: café pa’ quedarse
+link: ordenar para recoger
+link: ver menú
+image: Vaso bajo de café helado con hielos sobre un fondo color mostaza.
+list: Lo que nos define
+region: ¿qué se te antoja?
+heading2: ¿qué se te antoja?
+table: Bebidas de café y sus precios en pesos mexicanos (MXN)
+columnheader: BEBIDA
+columnheader: CHICO 240 MILILITROS
+columnheader: GRANDE 355 MILILITROS
+rowheader: lava , espresso · doble carga, espeso y oscuro
+cell: 42 pesos
+cell: 52 pesos
+rowheader: ceniza , americano · espresso y agua caliente, ligero
+cell: 48 pesos
+cell: 56 pesos
+rowheader: xolo , cortado · chiquito pero con carácter
+cell: 52 pesos
+cell: 60 pesos
+rowheader: nevado , capuchino · espuma alta y cremosa
+cell: 58 pesos
+cell: 68 pesos
+rowheader: técari , latte · más leche, suave y largo
+cell: 62 pesos
+cell: 72 pesos
+rowheader: cholo , mocha · con chocolate de la sierra
+cell: 68 pesos
+cell: 78 pesos
+rowheader: tuba , cold brew · 18 horas en frío, pa’l calor
+cell: 64 pesos
+cell: 78 pesos
+rowheader: fuego , filtrado V60 · el origen de la semana, recién servido
+cell: 70 pesos
+cell: 84 pesos
+link: ordenar café
+image: Tazas de café con detalles rojos acomodadas en filas sobre un fondo rojo.
+region: pa’ llevar a casa
+heading2: pa’ llevar a casa
+image: Granos de café tostado, de cerca.
+list: Bolsas de café disponibles
+heading3: la casa
+term: ORIGEN
+term: NOTAS
+term: PROCESO
+heading3: volcán
+term: ORIGEN
+term: NOTAS
+term: PROCESO
+heading3: sierra
+term: ORIGEN
+term: NOTAS
+term: PROCESO
+link: ordenar beans
+region: pídelo antes y sáltate la fila
+heading2: pídelo antes y sáltate la fila
+image: Dos baristas preparan bebidas en una barra iluminada con luz naranja.
+group: ¿qué te servimos?
+radio: lava , espresso · 42 pesos
+radio: ceniza , americano · 48 pesos
+radio: xolo , cortado · 52 pesos
+radio: nevado , capuchino · 58 pesos
+radio: técari , latte · 62 pesos
+radio: cholo , mocha · 68 pesos
+radio: tuba , cold brew · 64 pesos
+radio: fuego , filtrado V60 · 70 pesos
+radio: nada solo beans
+group: tamaño
+radio: chico 240 mililitros · 68 pesos
+radio: grande 355 mililitros · 78 pesos
+group: leche
+radio: entera
+radio: deslactosada
+radio: avena
+radio: almendra
+group: ¿te llevas beans? (opcional)
+radio: no, gracias
+radio: la casa 250 gramos · 220 pesos
+radio: volcán 250 gramos · 300 pesos
+radio: sierra 250 gramos · 340 pesos
+group: ¿cómo lo molemos?
+radio: en grano
+radio: espresso
+radio: filtro (V60, Chemex)
+radio: prensa francesa
+radio: moka
+group: ¿a nombre de quién y cuándo pasas?
+textbox: Tu nombre
+group: Paso por él
+radio: en 15 minutos
+radio: en 30 minutos
+radio: en 45 minutos
+radio: en 1 hora
+heading3: tu pedido
+list: Productos de tu pedido
+button: pedir pa’ recoger
+region: aquí hay lugar pa’ todos
+heading2: aquí hay lugar pa’ todos
+list: Eventos de la semana
+heading3: catación abierta
+heading3: latte art jam
+heading3: club de lectura y filtrados
+image: Vista desde la calle de una cafetería iluminada de noche, con gente platicando en sus mesas.
+heading3: club koffe
+list: Beneficios del club
+ListMarker: • 
+ListMarker: • 
+ListMarker: • 
+textbox: Tu apodo
+textbox: Correo electrónico
+button: unirme al club
+region: ¿cuándo nos caes?
+heading2: ¿cuándo nos caes?
+image: Barista preparando un café en la barra, con luz cálida y pizarrones al fondo.
+heading3: horario
+term: LUNES A VIERNES
+term: SÁBADO
+term: DOMINGO
+heading3: dirección
+link: Cómo llegar a Koffe en Google Maps
+heading3: contacto
+link: 312 123 4567
+link: hola@koffe.mx
+list: Redes y enlaces
+link: Koffe en Instagram
+link: Koffe en TikTok
+link: Fotografías de Unsplash
+link: Volver al inicio de la página
+image: koffe

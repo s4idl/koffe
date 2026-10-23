@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://s4idl.github.io/koffe/"><strong>→ ver el sitio</strong></a>
+  <a href="https://koffe-gold.vercel.app"><strong>→ ver el sitio</strong></a>
 </p>
 
 ---
@@ -109,8 +109,7 @@ npm run preview   # sirve el build
 
 Hecho con **React 19 + Vite**. Usa una sola familia tipográfica
 ([Archivo](https://fonts.google.com/specimen/Archivo)) y no tiene dependencias extra.
-Cada push a `main` se publica solo en GitHub Pages
-([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)).
+Publicado en [Vercel](https://koffe-gold.vercel.app); cada push a `main` se publica solo.
 
 ## Créditos
 
