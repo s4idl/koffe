@@ -96,8 +96,8 @@ una persona con discapacidad, usando VoiceOver. Sus observaciones y lo que cambi
 
 | Observación | Cambio |
 | --- | --- |
-| Las bebidas estaban en una cuadrícula de 3 columnas. Con VoiceOver el cursor brincaba de un lado a otro y era difícil saber si ya había escuchado todas las opciones. | Ahora es una lista vertical, una bebida por renglón. El grupo anuncia cuántas hay ("8 bebidas") y cada opción se lee como "técari, latte, desde 62 pesos". |
-| Tamaño y leche no aparecían hasta elegir una bebida. Como la tarea los pedía, la persona los buscaba y no los encontraba. | Los 5 pasos están siempre en la página: bebida, tamaño, leche, beans y nombre con hora. Un texto al inicio del formulario los enumera, y cada grupo se anuncia como "paso 2 de 5: tamaño". |
+| Era difícil saber si ya había escuchado todas las bebidas. | El grupo anuncia cuántas hay ("¿qué te servimos? 8 bebidas") y cada opción se lee completa: "técari, latte, 62 pesos". |
+| Tamaño y leche no aparecían hasta elegir una bebida. Como la tarea los pedía, la persona los buscaba y no los encontraba. | Tamaño y leche siempre están en la página, pero bloqueados (`disabled`) y difuminados hasta que eliges un café. Antes de ellos hay un aviso, "Primero elige un café para escoger tamaño y leche.", ligado a cada grupo con `aria-describedby`, así que el lector lo dice al llegar ahí. Cada grupo se anuncia como "paso 2 de 5: tamaño". |
 
 ## Cómo comprobarlo
 

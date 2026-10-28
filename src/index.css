@@ -724,22 +724,9 @@ select:focus-visible {
   gap: 0.5rem;
 }
 
-/* One drink per row: screen reader and eyes go top to bottom, never zigzag */
 .chips-drinks {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.4rem;
-}
-
-.chips-drinks .chip {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-}
-
-.chip-real {
-  font-weight: 400;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .order-howto {
@@ -747,10 +734,45 @@ select:focus-visible {
   max-width: 40rem;
 }
 
-.group-hint {
-  margin: -0.75rem 0 2rem;
-  font-size: 0.875rem;
-  color: var(--muted-on-ink);
+/* Size + milk before a drink is picked: still visible, blurred and disabled,
+   with the reason stamped on top */
+.drink-extras {
+  position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .drink-extras .chips {
+    transition: filter 0.2s ease, opacity 0.2s ease;
+  }
+}
+
+.is-locked .chips {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.is-locked .group > legend {
+  opacity: 0.6;
+}
+
+.is-locked .chip {
+  cursor: not-allowed;
+}
+
+.locked-note {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 90%;
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: var(--orange);
+  color: var(--ink);
+  font-weight: 700;
+  text-align: center;
 }
 
 /* Radio card: selected state is a full orange fill (6:1 against the ink block) */
@@ -1218,8 +1240,21 @@ address {
     min-height: 0;
   }
 
+  .chips-drinks {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .group-row {
     grid-template-columns: 1fr;
+  }
+
+  /* Stacked groups are too tall to overlay: the note sits above them instead */
+  .locked-note {
+    position: static;
+    transform: none;
+    width: auto;
+    max-width: none;
+    margin-bottom: 1rem;
   }
 
   /* 1.4.10 Reflow: the menu table must fit 320px without horizontal scrolling */
