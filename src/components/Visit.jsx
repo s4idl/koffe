@@ -12,7 +12,7 @@ export default function Visit() {
         <img
           className="visit-photo"
           src="images/barra.jpg"
-          alt="Barista preparando un café en la barra, con luz cálida y pizarrones al fondo."
+          alt="Un barista sirve leche espumada con calma detrás de una barra de piedra; la luz tenue y los pizarrones escritos a mano hacen que el lugar se sienta tranquilo y acogedor."
           width="1000"
           height="1500"
           loading="lazy"

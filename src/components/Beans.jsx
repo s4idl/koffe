@@ -20,7 +20,7 @@ export default function Beans() {
         <img
           className="beans-photo"
           src="images/granos.jpg"
-          alt="Granos de café tostado, de cerca."
+          alt="Granos de café recién tostados, de cerca, brillantes y en tonos de café claro a casi negro."
           width="900"
           height="1350"
           loading="lazy"

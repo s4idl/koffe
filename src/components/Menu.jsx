@@ -65,7 +65,7 @@ export default function Menu() {
         <img
           className="menu-photo"
           src="images/tazas-rojas.jpg"
-          alt="Tazas de café con detalles rojos acomodadas en filas sobre un fondo rojo."
+          alt=""
           width="960"
           height="1200"
           loading="lazy"

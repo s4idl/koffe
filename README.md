@@ -25,7 +25,7 @@
 | --- | --- |
 | Caso de uso 1 | **Revisar el menú, precios y horario.** Sección `menú` + `visítanos` |
 | Caso de uso 2 | **Ordenar café y/o beans para recoger.** Sección `ordena` |
-| Imágenes | Hero, menú, ordena, beans, comunidad y visítanos; todas con `alt` descriptivo |
+| Imágenes | Las fotos de ordena, beans, comunidad y visítanos tienen un `alt` que describe el ambiente del café; las del hero y el menú son decorativas (`alt=""`) |
 | Links | Navegación, "saltar al contenido", llamados a ordenar, redes en el footer |
 | Tabla | Menú de bebidas con precios por tamaño |
 | Formulario | Pedido para recoger (y un segundo formulario corto para el club) |

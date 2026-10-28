@@ -154,7 +154,7 @@ export default function Order() {
         <img
           className="order-photo"
           src="images/barra-naranja.jpg"
-          alt="Dos baristas preparan bebidas en una barra iluminada con luz naranja."
+          alt="Dos baristas preparan pedidos en la barra, bañados por una luz naranja cálida, junto al molino y vasos listos para llevar."
           width="736"
           height="981"
           loading="lazy"

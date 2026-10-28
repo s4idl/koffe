@@ -30,7 +30,7 @@ export default function Hero() {
         <img
           className="hero-photo"
           src="images/hero-naranja.jpg"
-          alt="Vaso bajo de café helado con hielos sobre un fondo color mostaza."
+          alt=""
           width="1300"
           height="1040"
           fetchPriority="high"

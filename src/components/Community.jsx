@@ -101,7 +101,7 @@ export default function Community() {
         <div className="club" id="club">
           <img
             src="images/noche.jpg"
-            alt="Vista desde la calle de una cafetería iluminada de noche, con gente platicando en sus mesas."
+            alt="De noche, desde la calle, se ve por el ventanal una cafetería con luz cálida, plantas colgando y un grupo de amigos platicando alrededor de una mesa."
             width="1400"
             height="934"
             loading="lazy"
