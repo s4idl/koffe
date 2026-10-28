@@ -89,6 +89,16 @@ Algunas cosas que no saltan a la vista pero que están pensadas a propósito:
   (enviar, hacer otro pedido) son `<button>`.
 - Respeta `prefers-reduced-motion`.
 
+## Prueba con usuario
+
+Hicimos la tarea de pedir un latte grande con leche de avena para recoger en 30 minutos con
+una persona con discapacidad visual que usa VoiceOver. Sus observaciones y lo que cambiamos:
+
+| Observación | Cambio |
+| --- | --- |
+| Las bebidas estaban en una cuadrícula de 3 columnas. Con VoiceOver el cursor brincaba de un lado a otro y era difícil saber si ya había escuchado todas las opciones. | Ahora es una lista vertical, una bebida por renglón. El grupo anuncia cuántas hay ("8 bebidas") y cada opción se lee como "técari, latte, desde 62 pesos". |
+| Tamaño y leche no aparecían hasta elegir una bebida. Como la tarea los pedía, la persona los buscaba y no los encontraba. | Los 5 pasos están siempre en la página: bebida, tamaño, leche, beans y nombre con hora. Un texto al inicio del formulario los enumera, y cada grupo se anuncia como "paso 2 de 5: tamaño". |
+
 ## Cómo comprobarlo
 
 1. **Teclado:** recorre todo con `Tab`; las flechas cambian de opción dentro de cada grupo

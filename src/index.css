@@ -724,9 +724,33 @@ select:focus-visible {
   gap: 0.5rem;
 }
 
+/* One drink per row: screen reader and eyes go top to bottom, never zigzag */
 .chips-drinks {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+}
+
+.chips-drinks .chip {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.chip-real {
+  font-weight: 400;
+}
+
+.order-howto {
+  margin: 0 0 1.5rem;
+  max-width: 40rem;
+}
+
+.group-hint {
+  margin: -0.75rem 0 2rem;
+  font-size: 0.875rem;
+  color: var(--muted-on-ink);
 }
 
 /* Radio card: selected state is a full orange fill (6:1 against the ink block) */
@@ -1192,10 +1216,6 @@ address {
 
   .bean {
     min-height: 0;
-  }
-
-  .chips-drinks {
-    grid-template-columns: 1fr 1fr;
   }
 
   .group-row {

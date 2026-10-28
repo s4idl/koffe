@@ -65,6 +65,19 @@ function ticketItems(order) {
   return items
 }
 
+// Visible number for sighted users; screen readers hear "paso 2 de 5" so they know
+// where they are and how much is left.
+function Step({ n }) {
+  return (
+    <>
+      <span className="step" aria-hidden="true">
+        {n}
+      </span>
+      <span className="visually-hidden">paso {n} de 5: </span>
+    </>
+  )
+}
+
 // A native radio styled as a selectable card. The input stays in the accessibility
 // tree and keeps arrow-key navigation; only its default circle is hidden.
 function Chip({ name, value, checked, onChange, describedBy, children }) {
@@ -217,13 +230,15 @@ export default function Order() {
             </div>
           ) : (
             <form className="order-form" ref={formRef} onSubmit={handleSubmit} noValidate>
+              <p className="order-howto">
+                Son 5 pasos: bebida, tamaño, leche, beans (opcional) y tu nombre con la hora en que
+                pasas.
+              </p>
               <div className="order-steps">
                 <fieldset className="group">
                   <legend>
-                    <span className="step" aria-hidden="true">
-                      1
-                    </span>
-                    ¿qué te servimos?
+                    <Step n={1} />
+                    ¿qué te servimos? <span className="optional">({drinks.length} bebidas)</span>
                   </legend>
                   <div className="chips chips-drinks">
                     {drinks.map((d) => (
@@ -235,10 +250,17 @@ export default function Order() {
                         onChange={handleChange}
                         describedBy={errorId('drink')}
                       >
-                        <span className="chip-title">{d.name}</span>
+                        <span className="chip-title">
+                          {d.name}
+                          <span className="visually-hidden">, </span>
+                          <span className="chip-real">
+                            <span aria-hidden="true"> · </span>
+                            <span lang={d.realLang}>{d.real}</span>
+                          </span>
+                        </span>
                         <span className="visually-hidden">, </span>
                         <span className="chip-meta">
-                          <span lang={d.realLang}>{d.real}</span> · <Price value={d.small} />
+                          desde <Price value={d.small} />
                         </span>
                       </Chip>
                     ))}
@@ -250,58 +272,72 @@ export default function Order() {
                       describedBy={errorId('drink')}
                     >
                       <span className="chip-title">nada</span>
+                      <span className="visually-hidden">, </span>
                       <span className="chip-meta">solo beans</span>
                     </Chip>
                   </div>
                   {errorText('drink')}
                 </fieldset>
 
-                {drink && (
-                  <div className="group-row">
-                    <fieldset className="group">
-                      <legend>tamaño</legend>
-                      <div className="chips">
-                        {sizes.map((s) => (
-                          <Chip
-                            key={s.id}
-                            name="size"
-                            value={s.id}
-                            checked={order.size === s.id}
-                            onChange={handleChange}
-                          >
-                            <span className="chip-title">{s.label}</span>
-                            <span className="chip-meta">
-                              <Say show={s.detail} as={s.spoken} /> · <Price value={drink[s.id]} />
-                            </span>
-                          </Chip>
-                        ))}
-                      </div>
-                    </fieldset>
+                {/* Size and milk are always on the page so nobody has to guess they exist;
+                    they only count when a drink is picked. */}
+                <div className="group-row">
+                  <fieldset className="group" aria-describedby="order-drink-only">
+                    <legend>
+                      <Step n={2} />
+                      tamaño
+                    </legend>
+                    <div className="chips">
+                      {sizes.map((s) => (
+                        <Chip
+                          key={s.id}
+                          name="size"
+                          value={s.id}
+                          checked={order.size === s.id}
+                          onChange={handleChange}
+                        >
+                          <span className="chip-title">{s.label}</span>
+                          <span className="chip-meta">
+                            <Say show={s.detail} as={s.spoken} />
+                            {drink && (
+                              <>
+                                {' '}
+                                · <Price value={drink[s.id]} />
+                              </>
+                            )}
+                          </span>
+                        </Chip>
+                      ))}
+                    </div>
+                  </fieldset>
 
-                    <fieldset className="group">
-                      <legend>leche</legend>
-                      <div className="chips">
-                        {milks.map((m) => (
-                          <Chip
-                            key={m}
-                            name="milk"
-                            value={m}
-                            checked={order.milk === m}
-                            onChange={handleChange}
-                          >
-                            <span className="chip-title">{m}</span>
-                          </Chip>
-                        ))}
-                      </div>
-                    </fieldset>
-                  </div>
-                )}
+                  <fieldset className="group" aria-describedby="order-drink-only">
+                    <legend>
+                      <Step n={3} />
+                      leche
+                    </legend>
+                    <div className="chips">
+                      {milks.map((m) => (
+                        <Chip
+                          key={m}
+                          name="milk"
+                          value={m}
+                          checked={order.milk === m}
+                          onChange={handleChange}
+                        >
+                          <span className="chip-title">{m}</span>
+                        </Chip>
+                      ))}
+                    </div>
+                  </fieldset>
+                </div>
+                <p className="group-hint" id="order-drink-only">
+                  Tamaño y leche aplican a tu bebida. Si solo te llevas beans, déjalos como están.
+                </p>
 
                 <fieldset className="group">
                   <legend>
-                    <span className="step" aria-hidden="true">
-                      2
-                    </span>
+                    <Step n={4} />
                     ¿te llevas beans? <span className="optional">(opcional)</span>
                   </legend>
                   <div className="chips">
@@ -345,9 +381,7 @@ export default function Order() {
 
                 <fieldset className="group">
                   <legend>
-                    <span className="step" aria-hidden="true">
-                      3
-                    </span>
+                    <Step n={5} />
                     ¿a nombre de quién y cuándo pasas?
                   </legend>
                   <div className="field">
