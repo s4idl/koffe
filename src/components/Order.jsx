@@ -151,6 +151,8 @@ export default function Order() {
   const bag = beans.find((b) => b.id === order.bag)
   const total = totalOf(order)
   const cart = ticketItems(order)
+  const drinkDescribedBy =
+    [!drink && 'order-drink-hint', errorId('drink')].filter(Boolean).join(' ') || undefined
 
   return (
     <section id="ordena" className="section order" aria-labelledby="ordena-title">
@@ -249,7 +251,7 @@ export default function Order() {
                         value={d.id}
                         checked={order.drink === d.id}
                         onChange={handleChange}
-                        describedBy={errorId('drink')}
+                        describedBy={drinkDescribedBy}
                       >
                         <span className="chip-title">{d.name}</span>
                         <span className="visually-hidden">, </span>
@@ -266,13 +268,20 @@ export default function Order() {
                       value="none"
                       checked={order.drink === 'none'}
                       onChange={handleChange}
-                      describedBy={errorId('drink')}
+                      describedBy={drinkDescribedBy}
                     >
                       <span className="chip-title">nada</span>
                       <span className="visually-hidden">, </span>
                       <span className="chip-meta">solo beans</span>
                     </Chip>
                   </div>
+                  {/* Tab skips the disabled size and milk groups, so the reason has to be heard
+                      here, on the drinks, before they're skipped. */}
+                  {!drink && (
+                    <p className="visually-hidden" id="order-drink-hint">
+                      Al elegir un café se habilitan el paso 2, tamaño, y el paso 3, leche.
+                    </p>
+                  )}
                   {errorText('drink')}
                 </fieldset>
 
