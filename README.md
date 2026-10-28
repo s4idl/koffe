@@ -92,7 +92,7 @@ Algunas cosas que no saltan a la vista pero que están pensadas a propósito:
 ## Prueba con usuario
 
 Hicimos la tarea de pedir un latte grande con leche de avena para recoger en 30 minutos con
-una persona con discapacidad visual que usa VoiceOver. Sus observaciones y lo que cambiamos:
+una persona con discapacidad, usando VoiceOver. Sus observaciones y lo que cambiamos:
 
 | Observación | Cambio |
 | --- | --- |
