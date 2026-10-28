@@ -230,7 +230,8 @@ export default function Order() {
             </div>
           ) : (
             <form className="order-form" ref={formRef} onSubmit={handleSubmit} noValidate>
-              <p className="order-howto">
+              {/* Sighted users see the numbered steps; screen readers get the overview here. */}
+              <p className="visually-hidden">
                 Son 5 pasos: bebida, tamaño, leche, beans (opcional) y tu nombre con la hora en que
                 pasas.
               </p>

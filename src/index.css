@@ -729,11 +729,6 @@ select:focus-visible {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.order-howto {
-  margin: 0 0 1.5rem;
-  max-width: 40rem;
-}
-
 /* Size + milk before a drink is picked: still visible, blurred and disabled,
    with the reason stamped on top */
 .drink-extras {
@@ -759,6 +754,13 @@ select:focus-visible {
   cursor: not-allowed;
 }
 
+/* No orange fill behind the note while locked, so the orange text keeps its contrast */
+.is-locked .chip:has(input:checked) {
+  background: transparent;
+  border-color: var(--muted-on-ink);
+  color: inherit;
+}
+
 .locked-note {
   position: absolute;
   z-index: 1;
@@ -768,9 +770,12 @@ select:focus-visible {
   width: max-content;
   max-width: 90%;
   margin: 0;
-  padding: 0.6rem 1rem;
-  background: var(--orange);
-  color: var(--ink);
+  padding: 0.25rem 0.75rem;
+  /* Plain orange text; the soft ink halo fades the blurred chips behind it (5.7:1) */
+  background: var(--ink);
+  box-shadow: 0 0 1.5rem 1rem var(--ink);
+  color: var(--orange);
+  font-size: 1.05rem;
   font-weight: 700;
   text-align: center;
 }
@@ -1254,6 +1259,9 @@ address {
     transform: none;
     width: auto;
     max-width: none;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
     margin-bottom: 1rem;
   }
 
